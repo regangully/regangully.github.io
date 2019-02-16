@@ -88,7 +88,6 @@ $(document).ready(function(){
 
 
     $(window).scroll(function() {
-        console.log("Scrolling!");
         let distance = $(window).scrollTop();
         // let marginLeft = parseInt(($("#first-name").css("margin-left")).replace(/[^\d\.]/g, ''),10);
         $('#first-name').css({ 'transform': 'translate(' + -distance + 'px, 0px)'});
