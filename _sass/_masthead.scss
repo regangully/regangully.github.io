@@ -1,0 +1,35 @@
+// Masthead
+//
+// Super small header above the content for site name and short description.
+
+.masthead {
+  background-color: $light-blue;
+}
+
+.masthead.transparent {
+  background-color: $light-blue;
+  opacity: 0.8;
+}
+
+.masthead-logo {
+  width: 50px;
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+
+.masthead-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $gray-4;
+
+  a {
+    color: inherit;
+  }
+
+  small {
+    font-size: 75%;
+    font-weight: 400;
+    opacity: .5;
+  }
+}

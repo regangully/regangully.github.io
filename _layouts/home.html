@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  <div>
+  <div class="home-background">
+    <main>
+      <div class="bouncy-button animated fadeInUp"><a class="action-button" href="#about">Get to know me</a></div>
+      <div id="home" class="home-section">
+        <div id="my-picture" class="my-picture"><img src="{{site.url}}/assets/me.png" /></div>
+        <div class="pattern"></div>
+        <div class="title">
+          <div id="first-name" class="title-text">Regan</div>
+          <div id="last-name" class="title-text outline">Gully</div>
+        </div>
+      </div>
+      <div id="about" class="about-section">
+        <div class="container">
+          <div class="subsection-title">A little bit</div>
+          <div class="section-title">About Me</div>
+          <div class="text">
+            <p>Hello! My name is Regan, funnily enough. I am a kiwi Software Engineer who currently lives and works in
+              little-ole' Aotearoa, New Zealand.<p>
+                I have always had a passion for creating things. Nowadays I use this creativity to design and develop
+                software to impact, excite and positively influence people.
+                <p>When I'm not busy developing I like to pass-the-time having a hit around at tennis, and cheering on
+                  the greatest-of-all-time, Roger Federer.
+                  I also like to embrace my inner rock-star and strum out a tune on my guitar when I get the chance.</p>
+          </div>
+          <div class="social-container">
+            <div class="social"><a href="https://instagram.com/regangully"><img  src="{{site.url}}/assets/instagram.png"></a></div>
+            <!-- <div class="social"><img href="instagram.com/regangully" src="{{site.url}}/assets/linkedin.png"></div> -->
+            <div class="social"><a href="https://youtube.com/regangully"><img href="youtube.com/regangully" src="{{site.url}}/assets/youtube.png"></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="experience" class="experience-section">
+        <img id="spice-1" class="spice-circle left" src="./assets/circle.png"/>
+        <div class="container">
+          <div class="subsection-title experience">The companies I've worked with.</div>
+          <div class="section-title light">Experience</div>
+          <div id="job-subsection" class="job-subsection">
+            <div class="job-company">Smudge Apps</div>
+            <div class="job-position">Software Designer & Developer</div>
+            <div class="job-date">Jan 2018 - Present</div>
+            <div class="extended-details">
+              <p>Smudge is a leading New Zealand software development company based in Christchurch. It develops
+                high-quality consumer facing and enterprise apps for reknowned clients such as Coca-Cola Amatil, SKY NZ
+                and NZ Police.</p>
+
+              <p>During my time at Smudge I have employed software-engineering development practices such as Scrum,
+                rapid-prototyping and Smudge's intention-based design methodology, to deliver projects that meet client
+                requirements.</p>
+
+              <p>
+                Smudge's culture is fast-paced and cross-functional meaning that I have had the chance to work with the
+                team to build a wide variety of software systems. This has helped me to further refine
+                my skills in client-consultation, UI/UX design, mobile development in iOS and Android, and ReactJS web
+                development.
+              </p>
+
+              <p>
+                <div class="request-button-container"><a href="https://smudgeapps.com">Visit Smudge's website ➞</a></div>
+              </p>
+            </div>
+          </div>
+          <div class="job-subsection">
+            <div class="job-company">University of Canterbury</div>
+            <div class="job-position">Software Developer</div>
+            <div class="job-date">Nov 2017 - Present</div>
+            <div class="extended-details">
+              <p>The University of Canterbury International Relationships Office is responsible for managing the
+                university's international student programmes.</p>
+
+              <p>
+                I have worked with the team at UCIRO on two cross-platform React Native applications to enhance the way
+                that they distribute information to inbound and outbound students.
+              </p>
+
+              <p>
+                This role has provided me with additional understanding of the nuances, best-practices and challenges
+                in developing cross-platform software.
+              </p>
+
+              <p>
+                <div class="request-button-container">
+                  <a class="request-button" href="https://youtu.be/acH57W9aEOc?t=208">View my interview about this role
+                    ➞</a>
+                  <a class="request-button right" href="https://www.canterbury.ac.nz/">← Visit UC's website</a>
+                </div>
+              </p>
+
+            </div>
+          </div>
+          <div class="job-subsection">
+            <div class="job-company">SKOPE Industries</div>
+            <div class="job-position">Software Engineering Intern</div>
+            <div class="job-date">Nov 2016 - Feb 2017</div>
+            <div class="extended-details">
+              <p>SKOPE is a long-running manufacturer of high quality refrigeration units in Australia and New Zealand.
+              </p>
+
+              <p>
+                As a software engineering intern with the company I worked with the Engineering and IT departments to
+                develop a new system to be able to easily
+                monitor and analyse refrigeration data retrieved from units in the field.
+              </p>
+
+              <p>
+                I spent time evaluating and understanding the existing data acquisition processes to ensure the end
+                result would be able to meet the needs of engineers and testers in the department.
+              </p>
+
+              <p>
+                I relied upon modern, and predominately open-source technologies such as Python,
+                JavaScript, NodeJS, HTML, CSS, and Microsoft SQL. These allowed for a light-weight,
+                cost-effective, and maintainable solution.
+              </p>
+
+              <a class="request-button" href="https://www.skope.com/">Visit SKOPE's website ➞</a>
+            </div>
+          </div>
+          <div class="job-subsection last">
+            <div class="job-company">eStar</div>
+            <div class="job-position">Software Development Intern</div>
+            <div class="job-date">Nov 2015 - Feb 2016</div>
+            <div class="extended-details">
+              <p>eStar produces e-commerce solutions for large retail chains such as Country Road Group, Briscoes and
+                Rebel Sport. </p>
+
+              <p>As eStar's first-ever intern I worked within the company's scrum environment to develop new features
+                for a clients of all sizes.</p>
+
+              <p>As my first real-world software development employment, eStar gave me invaluable experience and
+                inspiration. I got to apply technical
+                skills that I had been learning in my studies to adapt the existing C#, XSLT and SQL code-base. It was
+                also my first chance to feel the
+                excitement of seeing work that I had a hand in creating go-live and have an impact on the shopping
+                experience of thousands of customers.
+              </p>
+
+              <a class="request-button" href="https://www.estaronline.com/">Visit eStar's website ➞</a>
+            </div>
+          </div>
+        </div>
+        <img id="spice-2" class="spice-circle right" src="./assets/circle.png"/>
+
+      </div>
+      <div id="education" class="education-section">
+          <img id="spice-3" class="spice-circle central" src="./assets/x-mark.png"/>
+        <div class="container">
+          <div class="subsection-title dark">The things I've learnt.</div>
+          <div class="section-title light">Education</div>
+          <div class="job-subsection last">
+            <div class="job-company">University of Canterbury</div>
+            <div class="job-position dark">Bachelor of Engineering with First Class Honours</div>
+            <div class="job-position sub dark">Software Engineering</div>
+            <div class="job-date dark">Jan 2014 - Nov 2017</div>
+            <div class="extended-details dark">
+              <p>I studied a Bachelor of Engineering Honours majoring in Software Engineering at the University of
+                Canterbury in Christchurch, New Zealand.</p>
+
+              <p>
+                At UC I worked hard to establish a good understanding of technical and process skills that are required
+                to excel in the software field.
+                Through the internships I performed as part of my degree, group projects and individual assignments I
+                further expanded my ability to manage myself under pressure and
+                to balance the differing perspectives that occur when working as a part of a team.
+              </p>
+            </div>
+          </div>
+          <div class="request-button-container"><a class="request-button dark" href="mailto:regangully@me.com">Request my full resume ➞</a></div>
+        </div>
+
+      </div>
+      <div id="skills" class="skills-section">
+        <div class="container">
+          <div class="subsection-title">What I have to offer.</div>
+          <div class="section-title">Skills</div>
+          <div>
+              <div class="row">
+                  <div class="column">
+                    <div class="skill-header">Languages</div>
+                    <div class="skill-row">JavaScript</div>
+                    <div class="skill-row">Swift</div>
+                    <div class="skill-row">Java</div>
+                    <div class="skill-row">Python</div>
+                    <div class="skill-row">HTML</div>
+                    <div class="skill-row">CSS</div>
+                    <div class="skill-row">C++</div>
+                    <div class="skill-row">SQL/NoSQL</div>
+                  </div>
+                  <div class="column">
+                      <div class="skill-header">Tools</div>
+                      <div class="skill-row">Firebase</div>
+                      <div class="skill-row">Sketch</div>
+                      <div class="skill-row">Xcode</div>
+                      <div class="skill-row">Android Studio</div>
+                      <div class="skill-row">macOS & Windows</div>
+                      <div class="skill-row">Git</div>
+                      <div class="skill-row">Atlassian Suite</div>
+                  </div>
+                  <div class="column">
+                      <div class="skill-header">Frameworks</div>
+                      <div class="skill-row">ReactJS</div>
+                      <div class="skill-row">ReactNative</div>
+                      <div class="skill-row">Ionic</div>
+                      <div class="skill-row">NodeJS</div>
+                      <div class="skill-row">AngularJS</div>
+                    </div>
+                </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <!-- <div id="blog" class="about-section">
+                <div class="container">
+                    <div class="subsection-title">My thoughts on things. </div>
+                    <div class="section-title">Blog</div>
+                    {{ content }}
+                </div>
+              </div> -->
+  <div id="contact" class="contact-section">
+    <div class="container">
+      <div class="subsection-title">Get in touch.</div>
+      <div class="section-title light">Contact Me</div>
+      <div class="text light">If you'd like to work with me, would like more information, or if you'd just like to chat
+        then email me to get in touch.</div>
+      <div class="request-button-container"><a class="request-button light" href="mailto:regangully@me.com">Email Me ➞</a></div>
+    </div>
+  </div>
+  </div>
+
+  </main>
+  </div>
+  <!-- <footer class="footer">
+        <small>
+          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
+        </small>
+      </footer> -->
+
+  {% if site.analytics_id %}
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', '{{ site.analytics_id }}', 'auto');
+    ga('send', 'pageview');
+  </script>
+  {% endif %}
+
+</div>
+</body>
+
+</html>

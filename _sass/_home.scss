@@ -1,0 +1,619 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
+html, body {
+  margin:0;
+  padding:0;
+  font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #278BD2;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+p {
+  font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.extended-details {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+
+.extended-details.dark {
+  color: #000;
+}
+
+
+.extended-details {
+  max-height: 0;
+  opacity: 0;
+  -webkit-transition: max-height 1s ease;
+  -moz-transition: max-height 1s ease;
+  -o-transition: max-height 1s ease;
+  transition: max-height 1s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+
+/* JOB SECTIONS */
+.job-subsection:hover > .extended-details { 
+  margin-top: 30px;
+  max-height: 500px;
+  opacity: 0.7;
+  -webkit-transition: max-height 1s ease;
+  -moz-transition: max-height 1s ease;
+  -o-transition: max-height 1s ease;
+  transition: max-height 1s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+
+.home-section {
+    height: 100vh;
+    max-height: 1200px;
+    min-height: 600px;
+    width: 100vw;
+    background-color: #29b9ee;
+    position: relative;
+    overflow: hidden;
+    z-index: -5;
+    padding: 0 0 5em 0;
+    z-index: 10;
+}
+
+.job-subsection {
+  position: relative;
+  padding: 1.5em 0 1.5em 0;
+  border-bottom: 1px solid #2A3C57;
+}
+
+.job-subsection.last {
+  border-bottom: 0px solid #2A3C57;
+}
+
+.job-subsection {
+  color: #FFF;
+}
+
+.request-button-container {
+  margin-top: 3em;
+}
+
+.request-button.light {
+  background-color: #1D3352;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  color: #FFF;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+
+.request-button.dark {
+  background-color: #1D3352;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  color: #FFF;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+
+.request-button:hover {
+  transform: scale(0.95);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.request-button.right {
+  float: right;
+}
+
+.job-company {
+  font-weight: 700;
+  opacity: 0.8;
+  font-size: 1em;
+}
+
+.job-company.dark {
+  font-weight: 700;
+  opacity: 0.8;
+  font-size: 1em;
+  color: #142C49;
+}
+
+.job-position {
+  font-weight: 500;
+  color: #6B7F9C;
+  font-size: 0.85em;
+  padding-top: 0.5em;
+}
+
+.job-position.sub {
+  opacity: 0.3;
+  font-weight: 400;
+}
+
+.job-position.dark.sub {
+  opacity: 0.75;
+  font-weight: 400;
+  color: #1D3352;
+}
+
+
+.job-position.dark {
+  color: #325383;
+}
+
+.job-date {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #485A75;
+  top: 1.5em;
+  position: absolute;
+  right: 0;
+  padding-top: 8px;
+}
+
+.job-date.dark {
+  color: #325383;
+  opacity: 0.8;
+  padding-top: 8px;
+
+}
+
+.container {
+  z-index: 11;
+}
+
+.about-section {
+  width: 100vw;
+  background-color: #FFF;
+  position: relative;
+  padding: 7em 0 7em 0;
+  z-index: 12;
+  box-shadow: 0 -15px 20px 0 rgba(0,0,0,0.25);
+}
+
+.contact-section {
+  width: 100vw;
+  background-color: #0B192E;
+  position: relative;
+  padding: 7em 0 7em 0;
+}
+
+#skills-row-1 {
+  background-color: orange;
+  position: relative;
+}
+
+#skills-row-2 {
+  background-color: green;
+}
+
+#skills-row-3 {
+  background-color: yellow;
+}
+
+.experience-section {
+  width: 100vw;
+  background-color: #152E4E;
+  position: relative;
+  padding: 7em 0 7em 0;
+}
+
+.skills-subsection {
+  position: relative;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.skills-row-container {
+  white-space: nowrap;
+  position: relative;
+}
+
+.skills-row {
+  padding: 7px;
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.skills-row.offset {
+  margin-left: -75px;
+}
+
+.education-section {
+  width: 100vw;
+  background-color: #2EBAEE;
+  position: relative;
+  padding: 7em 0 7em 0;
+  margin-top: -1px;
+  z-index: 12;
+}
+
+.skills-section {
+  width: 100vw;
+  background-color: #FFF;
+  position: relative;
+  padding: 7em 0 7em 0;
+  z-index: 12;
+}
+
+.skill-circle {
+  opacity: 0.5;
+  height: 125px;
+  width: 125px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background-color: black;
+  display: inline-block;
+  margin-right: 25px;
+  transition: all .2s ease-in-out;
+}
+
+.skill-circle:hover { 
+  transform: scale(1.1); 
+  opacity: 1;
+}
+
+.skill-image {
+  padding: 30px;
+}
+
+.skill-circle.yellow {
+  background-color: #FFC800;
+}
+
+.skill-circle.green {
+  background-color: #3AD95B;
+}
+
+.skill-circle.blue {
+  background-color: #278BD2;
+}
+
+.skill-circle.pink {
+  background-color: #FF2B91;
+}
+
+.skill-circle.teal {
+  background-color: #35DBDC;
+}
+
+.skill-circle.purple {
+  background-color: #523CA5;
+}
+
+.skill-circle.black {
+  background-color: #000000;
+}
+
+.dividing-image {
+  width: 2rem;
+  opacity: 0.05;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+
+.text {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.75rem;
+  color: #000;
+}
+
+.text.light {
+  color: #FFF;
+  opacity: 0.6;
+}
+
+.title {
+  font-family: 'Libre Franklin', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  margin: -8% 0 0 -25%;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.pattern {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url('/assets/pattern-blue.png');
+  background-size: 150px;
+  opacity: 0.02;
+  z-index: -3;
+}
+
+.social-container {
+  height: 130px;
+}
+
+
+.social {
+  width: 85px;
+  float: left;
+  padding-right: 50px;
+  margin-top: 70px;
+  opacity: 0.4;
+  margin-bottom: 50px;
+}
+
+.social:hover {
+  opacity: 1;
+}
+
+
+.title-text {
+  font-size: 6em;
+  text-transform: uppercase;
+  color: #FFF;
+  text-align: center;
+  z-index: 1;
+  line-height: 1em;
+  margin-left: -1em;
+}
+
+.section-title {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: #133F7F;
+  z-index: 1;
+  line-height: 1em;
+  padding: 0.1em 0 0.75em 0;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.spice-circle {
+  position: absolute;
+  opacity: 0.025;
+  z-index: 1;
+}
+
+.spice-circle.left {
+  top: 0;
+  margin-top: -100px;
+}
+
+.spice-circle.right {
+  right: 0;
+  bottom: 0;
+  width: 20em;
+  margin-bottom: -12em;
+  top: inherit;
+  margin-right: 5em;
+}
+
+.spice-circle.central {
+  left: 0;
+  bottom: 0;
+  width: 22em;
+  margin-left: 5em;
+  margin-bottom: -6em;
+  top: inherit;
+  margin-right: 5em;
+  opacity: 0.04;
+}
+
+.spice-circle.central-top {
+  right: 0;
+  top: 0;
+  width: 14em;
+  margin-right: 15em;
+  margin-top: -4em;
+  opacity: 0.04;
+}
+
+
+.section-title.light {
+  color: #FFFFFF;
+}
+
+.subsection-title {
+  font-family: 'BenchNine', sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  color: #27AEE8;
+  font-size: 1.3em;
+}
+
+.subsection-title.dark {
+  color: #1D3352;
+}
+
+.subsection-title.light {
+  color: #FFF;
+}
+
+.subsection-title.experience {
+  color: #27AEE8;
+}
+
+.subsection-title.education {
+  color: #27AEE8;
+}
+
+.title-text.outline {
+  color: transparent !important;
+  -webkit-text-stroke: 2px #FFF;
+  margin-left: 0;
+  margin-right: -1em;
+}
+
+.my-picture {
+  position: absolute;
+  width: 38%;
+  min-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom:0;
+  z-index: -2;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-height: 98%;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.action-button {
+  color: #33418A;
+}
+
+.bouncy-button {
+  z-index: 100;
+  bottom: 0;
+  position: absolute;
+  left:50%;
+  width: 220px;
+  text-align: center;
+  margin-bottom: 3em;
+  margin-left:-110px;
+  padding: 10px 0 10px 0;
+  background-color: #FFF;
+  border-radius: 10px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  z-index: 100;
+}
+
+.bouncy-button:hover {
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.skill-header {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+
+.skill-row {
+  font-size: 0.8em;
+  line-height: 2em;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+      width: 100%;
+  }
+}
+
+/* condition for screen size minimum of 500px */
+@media (min-width: 2000px) {
+  
+  .title {
+    margin: -3% 0 0 -25%;
+  }
+
+  .my-picture {
+    width: 18%;
+    max-width: 700px;
+  }
+  
+
+}
+
+/* condition for screen size minimum of 500px */
+@media (min-width: 4000px) {
+  
+  .title {
+    margin: -2% 0 0 -25%;
+    font-size: 1.2em;
+  }
+
+  .my-picture {
+    width: 18%;
+    max-width: 700px;
+  }
+  
+
+}
+
+
+
+/* condition for screen size minimum of 500px */
+@media (max-width: 800px) {
+
+  .title {
+    margin: -15% 0 0 -25%;
+  }
+
+}
+
+/* condition for screen size minimum of 500px */
+@media (max-width: 700px) {
+
+  /* your conditional / responsive CSS inside this condition */
+  .title-text {
+    font-size: 4em;
+  }
+
+  .job-company {
+    font-size: 0.85em;
+  }
+  
+  .job-position {
+    font-size: 0.75em;
+  }
+  
+  .job-date {
+    padding-top: 0.5em;
+    font-size: 0.75em;
+  }
+  
+
+  .title {
+    margin: -20% 0 0 -25%;
+  }
+
+}
+
+
