@@ -81,11 +81,6 @@ $(document).ready(function(){
     let aboutOffset = $("#about").offset();
     let experienceOffset = $("#experience").offset();
 
-    $('#spice-1').css({ 'transform': 'translate(0, ' + (distance - aboutOffset.top - 400) / 3 + 'px)'});
-    $('#spice-2').css({ 'transform': 'translate(0, ' + ((distance - aboutOffset.top) - 1500) / 3 + 'px)'});
-    $('#spice-3').css({ 'transform': 'translate(0, ' + ((distance - experienceOffset.top) - 800) / 3 + 'px)'});
-
-
 
     $(window).scroll(function() {
         let distance = $(window).scrollTop();
@@ -93,13 +88,6 @@ $(document).ready(function(){
         $('#first-name').css({ 'transform': 'translate(' + -distance + 'px, 0px)'});
         $('#last-name').css({ 'transform': 'translate(' + distance + 'px, 0px)'});
         $('#my-picture').css({ 'transform': 'translate(-50%, ' + distance / 3 + 'px)'});
-
-        let aboutOffset = $("#about").offset();
-        let experienceOffset = $("#experience").offset();
-        $('#spice-1').css({ 'transform': 'translate(0, ' + (distance - aboutOffset.top - 400) / 3 + 'px)'});
-        $('#spice-2').css({ 'transform': 'translate(0, ' + ((distance - aboutOffset.top) - 1500) / 3 + 'px)'});
-        $('#spice-3').css({ 'transform': 'translate(0, ' + ((distance - experienceOffset.top) - 800) / 3 + 'px)'});
-
         // console.log(marginLeft);
     });
 
