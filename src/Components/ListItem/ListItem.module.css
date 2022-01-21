@@ -1,0 +1,42 @@
+.image {
+  height: 40px;
+  margin-right: 50px;
+}
+
+.imageContainer {
+  flex: 1;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  line-height: 30px;
+  margin-bottom: 42px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.link {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.text {
+  margin: 0;
+  opacity: 0.7;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.subLabel {
+  opacity: 0.3;
+  font-weight: 300;
+}

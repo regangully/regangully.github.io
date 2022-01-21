@@ -1,0 +1,46 @@
+.navContainer {
+  display: flex;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.navItem {
+  font-size: 20px;
+}
+
+.navItemLink {
+  color: inherit;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+.navItemLink.alternate {
+  color: #33a6bf;
+}
+
+.navItemLink:hover .underline,
+.navItemLink.hover .underline {
+  opacity: 1;
+}
+
+.navItemLink:last-child {
+  margin-right: 0;
+}
+
+.underline {
+  width: 100%;
+  margin-top: 6px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 30px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.underline.alternate {
+  background-color: #33a6bf;
+}
+
+.underline.active {
+  opacity: 1;
+}
