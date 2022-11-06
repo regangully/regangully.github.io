@@ -3,8 +3,8 @@ import { styled } from "@stitches/react";
 const StyledButton = styled("button", {
   borderRadius: "9999px",
   backgroundColor: "transparent",
-  border: "1px solid #33A6BF",
-  color: "#33A6BF",
+  border: "1px solid #569F63",
+  color: "#569F63",
   fontSize: "16px",
   padding: "8px 16px 8px 16px",
   cursor: "pointer",
@@ -17,7 +17,7 @@ const StyledButton = styled("button", {
     },
   },
   "&:hover": {
-    backgroundColor: "#33A6BF",
+    backgroundColor: "#569F63",
     color: "#071726",
   },
 });

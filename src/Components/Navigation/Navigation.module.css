@@ -15,7 +15,7 @@
 }
 
 .navItemLink.alternate {
-  color: #33a6bf;
+  color: #569F63;
 }
 
 .navItemLink:hover .underline,
@@ -38,7 +38,7 @@
 }
 
 .underline.alternate {
-  background-color: #33a6bf;
+  background-color: #569F63;
 }
 
 .underline.active {

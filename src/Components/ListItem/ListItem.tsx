@@ -3,10 +3,10 @@ import Button from "../Button/Button";
 
 const ListItem = (props: {
   image: string;
-  text?: string;
+  text?: any;
   subLabel?: string;
   link?: string;
-  buttonLabel: string;
+  buttonLabel?: string;
 }) => {
   return (
     <div className={style.item}>
@@ -14,14 +14,14 @@ const ListItem = (props: {
         <img className={style.image} src={props.image} />
       </div>
       <div>
-        <p className={style.text}>{props.text}</p>
+        <div className={style.text}>{props.text}</div>
         <div className={style.footer}>
           <span className={style.subLabel}>{props.subLabel}</span>
-          <div className={style.link}>
+          {props.buttonLabel && <div className={style.link}>
             <a target="_blank" href={props.link}>
               <Button label={props.buttonLabel} />
             </a>
-          </div>
+          </div>}
         </div>
       </div>
     </div>

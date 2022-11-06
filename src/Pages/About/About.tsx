@@ -1,11 +1,13 @@
 import style from "./About.module.css";
 import Page from "../../Components/Page/Page";
 import { LinkedinLogo, DribbbleLogo } from "phosphor-react";
+import { motion } from "framer-motion";
+import { ANIMATE_PROPS } from "../../Animation";
 
 const About = () => {
   return (
     <Page alternateBackground={true} heading="About Me">
-      <div className={style.about}>
+      <motion.div {...ANIMATE_PROPS(0.75)} className={style.about}>
         <p>
           I am a kiwi Software Engineer who currently lives and works in
           little-ole' Aotearoa, New Zealand.
@@ -24,14 +26,14 @@ const About = () => {
           I am always interested in hearing about new opportunities, or business
           problems. Feel free to contact me if you think that I could help.
         </p>
-      </div>
+      </motion.div>
       <div className={style.socialContainer}>
-        <a className={style.socialIcon} target="_blank" href="https://www.linkedin.com/in/regangully/">
-          <LinkedinLogo  size={42} />
-        </a>
-        <a className={style.socialIcon} target="_blank" href="https://dribbble.com/regan">
+        <motion.a {...ANIMATE_PROPS(1)} className={style.socialIcon} target="_blank" href="https://www.linkedin.com/in/regangully/">
+          <LinkedinLogo size={42} />
+        </motion.a>
+        <motion.a {...ANIMATE_PROPS(1.2)} className={style.socialIcon} target="_blank" href="https://dribbble.com/regan">
           <DribbbleLogo className={style.socialIcon} size={42} />
-        </a>
+        </motion.a>
       </div>
     </Page>
   );

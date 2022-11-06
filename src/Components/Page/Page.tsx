@@ -1,7 +1,9 @@
 import shallow from "zustand/shallow";
 import useGlobalStore from "../../Store/GlobalStore";
 import { useEffect } from "react";
-import style from "./Page.module.css"
+import styles from "./Page.module.css";
+import { motion } from "framer-motion";
+import AnimatedText from "../AnimatedText/AnimatedText";
 
 const Page = (props: {
   heading?: string;
@@ -9,6 +11,18 @@ const Page = (props: {
   children?: any;
 }) => {
   const { alternateBackground = false } = props;
+
+  const container = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025
+      }
+    }
+  };
+
+  const placeholderText = [
+    { type: "heading2", classes: `${styles.heading}`, text: props.heading },
+  ];
 
   const { enableAlternateBackground, disableAlternateBackground } =
     useGlobalStore(
@@ -25,13 +39,24 @@ const Page = (props: {
       document.body.style.backgroundColor = "#071726";
     } else {
       disableAlternateBackground();
-      document.body.style.backgroundColor = "#33A6BF";
+      document.body.style.backgroundColor = "#569F63";
     }
   }, [alternateBackground]);
 
   return (
-    <div className={style.page}>
-      {props.heading && <h2 className={style.heading}>{props.heading}</h2>}
+    <div className={styles.page}>
+      {props.heading && <motion.div
+        className="App"
+        initial="hidden"
+        animate={"visible"}
+        variants={container}
+      >
+        <div className="container">
+          {placeholderText.map((item, index) => {
+            return <AnimatedText {...item} key={index} />;
+          })}
+        </div>
+      </motion.div>}
 
       {props.children}
     </div>

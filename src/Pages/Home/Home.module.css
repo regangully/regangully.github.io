@@ -5,7 +5,6 @@
 
 .header {
   margin-top: 116px;
-  line-height: 82px;
   display: flex;
   align-items: center;
 }
@@ -22,14 +21,15 @@
 }
 
 .heading {
-  color: #a4deeb;
+  color: #203C25;
+  margin-bottom: -18px;
 }
 
 .profile {
-  height: 180px;
+  height: 200px;
   border-radius: 100%;
   margin-right: 40px;
-  border: 7px solid #33a6bf;
+  border: 7px solid #569F63;
   box-shadow: 0 0 0 7px #fff;
 }
 
@@ -50,7 +50,7 @@
 
 .badgeLabel {
   font-size: 22px;
-  color: #33a6bf;
+  color: #3F724B;
 }
 
 .footer {
@@ -58,4 +58,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.badgeLink {
+  text-decoration: none;
 }

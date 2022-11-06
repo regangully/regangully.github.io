@@ -1,0 +1,23 @@
+.about {
+  margin-top: 32px;
+}
+
+.badgeContainer {
+  background-color: #fff;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  margin-top: 42px;
+  padding: 0 16px 0 16px;
+}
+
+.badgeLabel {
+  font-size: 22px;
+  color: #071726;
+}
+
+.badgeLink {
+  text-decoration: none;
+}

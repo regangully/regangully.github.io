@@ -1,10 +1,10 @@
 .image {
-  height: 40px;
-  margin-right: 50px;
+  height: 200px;
 }
 
 .imageContainer {
-  flex: 1;
+  width: 200px;
+  margin-right: 56px;
 }
 
 .item {
@@ -27,7 +27,6 @@
 
 .text {
   margin: 0;
-  opacity: 0.7;
 }
 
 .footer {
