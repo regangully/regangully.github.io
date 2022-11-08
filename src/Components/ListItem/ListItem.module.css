@@ -1,5 +1,5 @@
 .image {
-  height: 200px;
+  height: 80px;
 }
 
 .imageContainer {
@@ -10,6 +10,7 @@
 .item {
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   line-height: 30px;
   margin-bottom: 42px;
 }
@@ -30,6 +31,7 @@
 }
 
 .footer {
+  margin-top: 24px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

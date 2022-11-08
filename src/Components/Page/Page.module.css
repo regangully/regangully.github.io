@@ -4,4 +4,13 @@
 
 .page {
   padding-bottom: 132px;
+  box-sizing: border-box;
+  padding: 0 32px 42px 32px;
+}
+
+@media only screen and (max-width: 780px) {
+  .page {
+    padding: 0 32px 42px 32px;
+  }
+
 }

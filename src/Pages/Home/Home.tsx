@@ -1,12 +1,24 @@
 import Page from "../../Components/Page/Page";
 import PinImage from "../../Resources/pin.svg";
 import ProfileImage from "../../Resources/me.jpg";
+import Speaker from "../../Resources/speaker_high.svg";
+import Welcome from "../../Resources/welcome.mp3";
+import Kiaora from "../../Resources/kia_ora.mp3";
+import GoodDay from "../../Resources/good_day.mp3";
 import styles from "./Home.module.css";
 import { motion } from "framer-motion";
 import AnimatedText from "../../Components/AnimatedText/AnimatedText";
 import { ANIMATE_PROPS } from "../../Animation";
+import useSound from "use-sound";
+
 
 const Home = () => {
+  const [welcomeSound] = useSound(Welcome)
+  const [kiaoraSound] = useSound(Kiaora)
+  const [goodDaySound] = useSound(GoodDay)
+
+  const sounds = [welcomeSound, kiaoraSound, goodDaySound];
+
   const container = {
     visible: {
       transition: {
@@ -23,13 +35,24 @@ const Home = () => {
     }
   ];
 
+  const getRandomInt = (min: number, max: number) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  const getSound = () => {
+    return sounds[getRandomInt(0, 2)]
+  }
+
   return (
     <Page>
       <div className={styles.header}>
-        <motion.img {...ANIMATE_PROPS(0.2)} className={styles.profile} src={ProfileImage} />
+        <div className={styles.profileContainer}>
+          <motion.img {...ANIMATE_PROPS(0.2)} className={styles.profile} src={ProfileImage} />
+          <motion.img {...ANIMATE_PROPS(0.6)} onClick={() => getSound()()} className={styles.speaker} src={Speaker} />
+        </div>
 
         <motion.div
-          className="App"
+          className={styles.container}
           initial="hidden"
           animate={"visible"}
           variants={container}

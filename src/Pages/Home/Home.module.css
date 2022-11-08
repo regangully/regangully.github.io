@@ -9,6 +9,27 @@
   align-items: center;
 }
 
+.speaker {
+  background-color: #fff;
+  padding: 8px;
+  height: 42px;
+  border-radius: 100%;
+  position: absolute;
+  right: 42px;
+  bottom: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.speaker:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.profileContainer {
+  position: relative;
+}
+
 .location {
   display: flex;
   align-items: center;
@@ -21,7 +42,7 @@
 }
 
 .heading {
-  color: #203C25;
+  color: #203c25;
   margin-bottom: -18px;
 }
 
@@ -29,7 +50,7 @@
   height: 200px;
   border-radius: 100%;
   margin-right: 40px;
-  border: 7px solid #569F63;
+  border: 7px solid #569f63;
   box-shadow: 0 0 0 7px #fff;
 }
 
@@ -39,7 +60,7 @@
 }
 
 .badgeContainer {
-  background-color: #FFF;
+  background-color: #fff;
   position: relative;
   display: flex;
   align-items: center;
@@ -50,7 +71,7 @@
 
 .badgeLabel {
   font-size: 22px;
-  color: #3F724B;
+  color: #3f724b;
 }
 
 .footer {
@@ -62,4 +83,56 @@
 
 .badgeLink {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 780px) {
+  .speaker {
+    right: 0;
+  }
+  
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .header {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile {
+    height: 170px;
+    margin-right: 0;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .container {
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .heading {
+    margin-bottom: -12px;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 32px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .footer {
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
 }

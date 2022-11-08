@@ -1,7 +1,8 @@
 .navContainer {
   display: flex;
-  margin-top: 90px;
+  margin-top: 70px;
   margin-bottom: 90px;
+  padding: 0 32px;
 }
 
 .navItem {
@@ -15,7 +16,7 @@
 }
 
 .navItemLink.alternate {
-  color: #569F63;
+  color: #569f63;
 }
 
 .navItemLink:hover .underline,
@@ -38,9 +39,19 @@
 }
 
 .underline.alternate {
-  background-color: #569F63;
+  background-color: #569f63;
 }
 
 .underline.active {
   opacity: 1;
+}
+
+@media only screen and (max-width: 780px) {
+  .navContainer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
 }

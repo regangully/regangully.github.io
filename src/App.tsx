@@ -4,7 +4,7 @@ import Work from "./Pages/Work/Work";
 import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
 
-import Container from "./Components/Container";
+import Container from "./Components/Container/Container";
 import Navigation from "./Components/Navigation/Navigation";
 import { Route, Routes } from "react-router-dom";
 import useGlobalStore from "./Store/GlobalStore";
