@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: "Readex Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #569f63;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 32px;
+  opacity: 0.7;
+}
+
+p:first-child {
+  margin: 0;
+}
+
+h1 {
+  font-size: 90px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 46px;
+}
