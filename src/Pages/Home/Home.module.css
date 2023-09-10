@@ -1,12 +1,24 @@
 .pin {
   height: 36px;
-  margin-right: 18px;
+  margin-right: 12px;
 }
 
 .header {
   margin-top: 116px;
   display: flex;
   align-items: center;
+}
+
+.background {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  min-height: 900px;
+  object-fit: cover;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
 }
 
 .speaker {
@@ -60,6 +72,7 @@
 }
 
 .badgeContainer {
+  border-radius: 8px;
   background-color: #fff;
   position: relative;
   display: flex;
@@ -71,6 +84,9 @@
 
 .badgeLabel {
   font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   color: #3f724b;
 }
 
@@ -85,11 +101,11 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 900px) {
   .speaker {
     right: 0;
   }
-  
+
   h1 {
     font-size: 56px;
   }
@@ -132,7 +148,14 @@
   }
 
   .footer {
+    margin-top: 40px;
     padding: 0 32px;
     box-sizing: border-box;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .badgeLabel {
+    min-width: 200px;
   }
 }

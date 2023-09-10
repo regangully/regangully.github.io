@@ -1,54 +1,64 @@
 import Page from "../../Components/Page/Page";
 import PinImage from "../../Resources/pin.svg";
-import ProfileImage from "../../Resources/me.jpg";
+import ProfileImage from "../../Resources/me_pro.jpg";
 import Speaker from "../../Resources/speaker_high.svg";
 import Welcome from "../../Resources/welcome.mp3";
 import Kiaora from "../../Resources/kia_ora.mp3";
 import GoodDay from "../../Resources/good_day.mp3";
+import Background from "../../Resources/background.png";
 import styles from "./Home.module.css";
 import { motion } from "framer-motion";
 import AnimatedText from "../../Components/AnimatedText/AnimatedText";
 import { ANIMATE_PROPS } from "../../Animation";
 import useSound from "use-sound";
 
-
 const Home = () => {
-  const [welcomeSound] = useSound(Welcome)
-  const [kiaoraSound] = useSound(Kiaora)
-  const [goodDaySound] = useSound(GoodDay)
+  const [welcomeSound] = useSound(Welcome);
+  const [kiaoraSound] = useSound(Kiaora);
+  const [goodDaySound] = useSound(GoodDay);
 
   const sounds = [welcomeSound, kiaoraSound, goodDaySound];
 
   const container = {
     visible: {
       transition: {
-        staggerChildren: 0.025
-      }
-    }
+        staggerChildren: 0.025,
+      },
+    },
   };
 
   const placeholderText = [
     { type: "heading2", classes: `${styles.heading}`, text: "Kia ora!" },
     {
       type: "heading1",
-      text: "I'm Regan"
-    }
+      text: "I'm Regan",
+    },
   ];
 
   const getRandomInt = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+  };
 
   const getSound = () => {
-    return sounds[getRandomInt(0, 2)]
-  }
+    return sounds[getRandomInt(0, 2)];
+  };
 
   return (
     <Page>
+      <img className={styles.background} src={Background} />
       <div className={styles.header}>
         <div className={styles.profileContainer}>
-          <motion.img {...ANIMATE_PROPS(0.2)} className={styles.profile} src={ProfileImage} />
-          <motion.img {...ANIMATE_PROPS(0.6)} onClick={() => getSound()()} className={styles.speaker} src={Speaker} />
+          <motion.img
+            {...ANIMATE_PROPS(0.2)}
+            className={styles.profile}
+            src={ProfileImage}
+          />
+          <motion.img
+            {...ANIMATE_PROPS(0.6)}
+            onClick={() => getSound()()}
+            className={styles.speaker}
+            src={Speaker}
+          />
         </div>
 
         <motion.div
@@ -66,8 +76,8 @@ const Home = () => {
       </div>
 
       <motion.h5 {...ANIMATE_PROPS(0.6)} className={styles.description}>
-        A software engineer, and designer with a passion for creating things
-        that make a difference.
+        A software engineer with a passion for travelling,
+        exploring, and creating things that make a difference.
       </motion.h5>
 
       <div className={styles.footer}>

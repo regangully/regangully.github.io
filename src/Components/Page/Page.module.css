@@ -8,9 +8,8 @@
   padding: 0 32px 42px 32px;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 900px) {
   .page {
     padding: 0 32px 42px 32px;
   }
-
 }
