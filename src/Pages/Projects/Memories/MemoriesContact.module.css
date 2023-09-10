@@ -1,0 +1,18 @@
+.about {
+  margin-top: 32px;
+  margin-bottom: 100px;
+}
+
+.socialContainer {
+  display: flex;
+  margin-top: 64px;
+}
+
+.socialIcon {
+  color: #fff;
+  margin-right: 24px;
+}
+
+.socialIcon:last-child {
+  margin-right: 0;
+}

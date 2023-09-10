@@ -9,15 +9,17 @@ const Page = (props: {
   heading?: string;
   alternateBackground?: boolean;
   children?: any;
+  marginTop?: number;
+  image?: any;
 }) => {
-  const { alternateBackground = false } = props;
+  const { alternateBackground = false, image } = props;
 
   const container = {
     visible: {
       transition: {
-        staggerChildren: 0.025
-      }
-    }
+        staggerChildren: 0.025,
+      },
+    },
   };
 
   const placeholderText = [
@@ -44,19 +46,23 @@ const Page = (props: {
   }, [alternateBackground]);
 
   return (
-    <div className={styles.page}>
-      {props.heading && <motion.div
-        className="App"
-        initial="hidden"
-        animate={"visible"}
-        variants={container}
-      >
-        <div className="container">
-          {placeholderText.map((item, index) => {
-            return <AnimatedText {...item} key={index} />;
-          })}
-        </div>
-      </motion.div>}
+    <div style={{ marginTop: `${props.marginTop}px` }} className={styles.page}>
+      {image}
+      {props.heading && (
+        <motion.div
+          style={{marginTop: image ? "32px" : 0}}
+          className="App"
+          initial="hidden"
+          animate={"visible"}
+          variants={container}
+        >
+          <div className="container">
+            {placeholderText.map((item, index) => {
+              return <AnimatedText {...item} key={index} />;
+            })}
+          </div>
+        </motion.div>
+      )}
 
       {props.children}
     </div>

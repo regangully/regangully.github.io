@@ -9,8 +9,10 @@ import Navigation from "./Components/Navigation/Navigation";
 import { Route, Routes } from "react-router-dom";
 import useGlobalStore from "./Store/GlobalStore";
 import shallow from "zustand/shallow";
+import MemoriesPrivacy from "./Pages/Projects/Memories/MemoriesPrivacy";
+import MemoriesContact from "./Pages/Projects/Memories/MemoriesContact";
 
-function App() {
+const NavigationRoutes = () => {
   const { alternateBackground } = useGlobalStore(
     (state) => ({
       alternateBackground: state.alternateBackground,
@@ -19,22 +21,33 @@ function App() {
   );
 
   return (
+    <>
+      <Navigation
+        alternateBackground={alternateBackground}
+        routes={[
+          { label: "Home", path: "/" },
+          { label: "About", path: "/about" },
+          { label: "Work", path: "/work" },
+          { label: "Contact", path: "/contact" },
+        ]}
+      />
+    </>
+  );
+};
+
+function App() {
+  return (
     <div className="App">
       <Container>
-        <Navigation
-          alternateBackground={alternateBackground}
-          routes={[
-            { label: "Home", path: "/" },
-            { label: "About", path: "/about" },
-            { label: "Work", path: "/work" },
-            { label: "Contact", path: "/contact" },
-          ]}
-        />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<NavigationRoutes />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+          <Route path="/memories/privacy" element={<MemoriesPrivacy />} />
+          <Route path="/memories/contact" element={<MemoriesContact />} />
         </Routes>
       </Container>
     </div>
