@@ -6,7 +6,7 @@ import About from "./Pages/About/About";
 
 import Container from "./Components/Container/Container";
 import Navigation from "./Components/Navigation/Navigation";
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import useGlobalStore from "./Store/GlobalStore";
 import shallow from "zustand/shallow";
 import MemoriesPrivacy from "./Pages/Projects/Memories/MemoriesPrivacy";
@@ -31,6 +31,7 @@ const NavigationRoutes = () => {
           { label: "Contact", path: "/contact" },
         ]}
       />
+      <Outlet />
     </>
   );
 };
