@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.17f02bdb.chunk.css",
-    "main.js": "/static/js/main.28f46abf.chunk.js",
-    "main.js.map": "/static/js/main.28f46abf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.001816c8.js",
-    "runtime-main.js.map": "/static/js/runtime-main.001816c8.js.map",
-    "static/js/2.50bd3477.chunk.js": "/static/js/2.50bd3477.chunk.js",
-    "static/js/2.50bd3477.chunk.js.map": "/static/js/2.50bd3477.chunk.js.map",
-    "static/js/3.1786734e.chunk.js": "/static/js/3.1786734e.chunk.js",
-    "static/js/3.1786734e.chunk.js.map": "/static/js/3.1786734e.chunk.js.map",
-    "static/js/4.dbc1e718.chunk.js": "/static/js/4.dbc1e718.chunk.js",
-    "static/js/4.dbc1e718.chunk.js.map": "/static/js/4.dbc1e718.chunk.js.map",
+    "main.js": "/static/js/main.601efd54.chunk.js",
+    "main.js.map": "/static/js/main.601efd54.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6e672432.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6e672432.js.map",
+    "static/js/2.6e27e39f.chunk.js": "/static/js/2.6e27e39f.chunk.js",
+    "static/js/2.6e27e39f.chunk.js.map": "/static/js/2.6e27e39f.chunk.js.map",
+    "static/js/3.67c1361b.chunk.js": "/static/js/3.67c1361b.chunk.js",
+    "static/js/3.67c1361b.chunk.js.map": "/static/js/3.67c1361b.chunk.js.map",
+    "static/js/4.9b16666f.chunk.js": "/static/js/4.9b16666f.chunk.js",
+    "static/js/4.9b16666f.chunk.js.map": "/static/js/4.9b16666f.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.17f02bdb.chunk.css.map": "/static/css/main.17f02bdb.chunk.css.map",
-    "static/js/2.50bd3477.chunk.js.LICENSE.txt": "/static/js/2.50bd3477.chunk.js.LICENSE.txt",
-    "static/js/3.1786734e.chunk.js.LICENSE.txt": "/static/js/3.1786734e.chunk.js.LICENSE.txt",
+    "static/js/2.6e27e39f.chunk.js.LICENSE.txt": "/static/js/2.6e27e39f.chunk.js.LICENSE.txt",
+    "static/js/3.67c1361b.chunk.js.LICENSE.txt": "/static/js/3.67c1361b.chunk.js.LICENSE.txt",
     "static/media/background.ae37d5da.png": "/static/media/background.ae37d5da.png",
     "static/media/daybreak.8cc7c180.png": "/static/media/daybreak.8cc7c180.png",
     "static/media/estar.b68a6831.png": "/static/media/estar.b68a6831.png",
@@ -32,9 +32,9 @@
     "static/media/welcome.afa884e6.mp3": "/static/media/welcome.afa884e6.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.001816c8.js",
-    "static/js/2.50bd3477.chunk.js",
+    "static/js/runtime-main.6e672432.js",
+    "static/js/2.6e27e39f.chunk.js",
     "static/css/main.17f02bdb.chunk.css",
-    "static/js/main.28f46abf.chunk.js"
+    "static/js/main.601efd54.chunk.js"
   ]
 }
