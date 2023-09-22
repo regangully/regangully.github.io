@@ -7,21 +7,24 @@ const ListItem = (props: {
   subLabel?: string;
   link?: string;
   buttonLabel?: string;
+  imageHeight?: number;
 }) => {
   return (
     <div className={style.item}>
       <div className={style.imageContainer}>
-        <img className={style.image} src={props.image} />
+        <img className={style.image} src={props.image} height={props.imageHeight} />
       </div>
       <div>
         <div className={style.text}>{props.text}</div>
         <div className={style.footer}>
           <span className={style.subLabel}>{props.subLabel}</span>
-          {props.buttonLabel && <div className={style.link}>
-            <a target="_blank" href={props.link}>
-              <Button label={props.buttonLabel} />
-            </a>
-          </div>}
+          {props.buttonLabel && (
+            <div className={style.link}>
+              <a target="_blank" href={props.link}>
+                <Button label={props.buttonLabel} />
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>

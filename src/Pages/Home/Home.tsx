@@ -1,6 +1,7 @@
 import Page from "../../Components/Page/Page";
 import PinImage from "../../Resources/pin.svg";
-import ProfileImage from "../../Resources/me_pro.jpg";
+import ProfileImage1 from "../../Resources/regan-1.jpg";
+import ProfileImage2 from "../../Resources/regan-2.jpg";
 import Speaker from "../../Resources/speaker_high.svg";
 import Welcome from "../../Resources/welcome.mp3";
 import Kiaora from "../../Resources/kia_ora.mp3";
@@ -18,6 +19,7 @@ const Home = () => {
   const [goodDaySound] = useSound(GoodDay);
 
   const sounds = [welcomeSound, kiaoraSound, goodDaySound];
+  const image = [ProfileImage1, ProfileImage2];
 
   const container = {
     visible: {
@@ -43,15 +45,23 @@ const Home = () => {
     return sounds[getRandomInt(0, 2)];
   };
 
+  const getImage = () => {
+    return image[getRandomInt(0, 1)];
+  };
+
   return (
     <Page>
-      <img className={styles.background} src={Background} />
+      <motion.img
+        {...ANIMATE_PROPS(0.1)}
+        className={styles.background}
+        src={Background}
+      />
       <div className={styles.header}>
         <div className={styles.profileContainer}>
           <motion.img
             {...ANIMATE_PROPS(0.2)}
             className={styles.profile}
-            src={ProfileImage}
+            src={getImage()}
           />
           <motion.img
             {...ANIMATE_PROPS(0.6)}
@@ -76,8 +86,8 @@ const Home = () => {
       </div>
 
       <motion.h5 {...ANIMATE_PROPS(0.6)} className={styles.description}>
-        A software engineer with a passion for travelling,
-        exploring, and creating things that make a difference.
+        A software engineer with a passion for travelling, exploring, and
+        creating things that make a difference.
       </motion.h5>
 
       <div className={styles.footer}>

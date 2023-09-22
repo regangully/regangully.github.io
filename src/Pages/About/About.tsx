@@ -28,22 +28,22 @@ const About = () => {
         </p>
       </motion.div>
       <div className={style.socialContainer}>
-        <motion.a
+        {/* <motion.a
           {...ANIMATE_PROPS(1)}
           className={style.socialIcon}
           target="_blank"
           href="https://www.instagram.com/regangully/"
         >
           <InstagramLogo size={42} />
-        </motion.a>
-        <motion.a
+        </motion.a> */}
+        {/* <motion.a
           {...ANIMATE_PROPS(1.2)}
           className={style.socialIcon}
           target="_blank"
           href="https://www.tiktok.com/@forbsey1"
         >
           <TiktokLogo size={42} />
-        </motion.a>
+        </motion.a> */}
         <motion.a
           {...ANIMATE_PROPS(1.4)}
           className={style.socialIcon}

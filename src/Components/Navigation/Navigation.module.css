@@ -3,6 +3,12 @@
   margin-top: 70px;
   margin-bottom: 90px;
   padding: 0 32px;
+  align-items: center;
+}
+
+.monogram {
+  height: 36px;
+  margin-right: 56px;
 }
 
 .navItem {
@@ -64,5 +70,10 @@
   .navItemLink {
     margin-right: 32px;
   }
+
+  .monogram {
+    display: none;
+  }
+  
   
 }
