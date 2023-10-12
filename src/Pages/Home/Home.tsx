@@ -51,11 +51,6 @@ const Home = () => {
 
   return (
     <Page>
-      <motion.img
-        {...ANIMATE_PROPS(0.1)}
-        className={styles.background}
-        src={Background}
-      />
       <div className={styles.header}>
         <div className={styles.profileContainer}>
           <motion.img

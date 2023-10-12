@@ -5,6 +5,7 @@ import {
   DribbbleLogo,
   InstagramLogo,
   TiktokLogo,
+  GithubLogo,
 } from "phosphor-react";
 import { motion } from "framer-motion";
 import { ANIMATE_PROPS } from "../../Animation";
@@ -44,6 +45,14 @@ const About = () => {
         >
           <TiktokLogo size={42} />
         </motion.a> */}
+        <motion.a
+          {...ANIMATE_PROPS(1.2)}
+          className={style.socialIcon}
+          target="_blank"
+          href="https://www.github.com/regangully/"
+        >
+          <GithubLogo size={42} />
+        </motion.a>
         <motion.a
           {...ANIMATE_PROPS(1.4)}
           className={style.socialIcon}

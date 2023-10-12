@@ -14,7 +14,9 @@ const Navigation = (props: {
 
   return (
     <div className={style.navContainer}>
-      <img className={style.monogram} src={Monogram} />
+      <Link to={"/"}>
+        <img className={style.monogram} src={Monogram} />
+      </Link>
       {routes.map((route, i) => {
         const isActive = location.pathname.endsWith(route.path);
 

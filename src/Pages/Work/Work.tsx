@@ -96,7 +96,7 @@ const Work = () => {
         <h2>Experience</h2>
         <div className={style.items}>
           <ListItem
-            subLabel="2021"
+            subLabel="2021 - Present"
             text={
               <>
                 <p>
@@ -132,7 +132,7 @@ const Work = () => {
                 exit={{ opacity: 0 }}
               >
                 <ListItem
-                  subLabel="2021"
+                  subLabel="2018 - 2021"
                   text={
                     <>
                       <p>
@@ -163,7 +163,7 @@ const Work = () => {
                   image={Smudge}
                 />
                 <ListItem
-                  subLabel="2021"
+                  subLabel="2016 - 2017"
                   text={
                     <>
                       <p>
@@ -198,7 +198,7 @@ const Work = () => {
                   image={Skope}
                 />
                 <ListItem
-                  subLabel="2021"
+                  subLabel="2015 - 2016"
                   text={
                     <>
                       <p>
