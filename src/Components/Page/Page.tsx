@@ -1,18 +1,18 @@
-import shallow from "zustand/shallow";
-import useGlobalStore from "../../Store/GlobalStore";
-import { useEffect } from "react";
 import styles from "./Page.module.css";
 import { motion } from "framer-motion";
 import AnimatedText from "../AnimatedText/AnimatedText";
+import Container from "../Container/Container";
 
 const Page = (props: {
   heading?: string;
-  alternateBackground?: boolean;
   children?: any;
   marginTop?: number;
   image?: any;
+  backgroundColor?: string;
+  paddingTop?: string;
+  paddingBottom?: string;
 }) => {
-  const { alternateBackground = false, image } = props;
+  const { image, backgroundColor, paddingTop, paddingBottom } = props;
 
   const container = {
     visible: {
@@ -26,45 +26,36 @@ const Page = (props: {
     { type: "heading2", classes: `${styles.heading}`, text: props.heading },
   ];
 
-  const { enableAlternateBackground, disableAlternateBackground } =
-    useGlobalStore(
-      (state) => ({
-        enableAlternateBackground: state.enableAlternateBackground,
-        disableAlternateBackground: state.disableAlternateBackground,
-      }),
-      shallow
-    );
-
-  useEffect(() => {
-    if (alternateBackground) {
-      enableAlternateBackground();
-      document.body.style.backgroundColor = "#071726";
-    } else {
-      disableAlternateBackground();
-      document.body.style.backgroundColor = "#569F63";
-    }
-  }, [alternateBackground]);
-
   return (
-    <div style={{ marginTop: `${props.marginTop}px` }} className={styles.page}>
-      {image}
-      {props.heading && (
-        <motion.div
-          style={{marginTop: image ? "32px" : 0}}
-          className="App"
-          initial="hidden"
-          animate={"visible"}
-          variants={container}
-        >
-          <div className="container">
-            {placeholderText.map((item, index) => {
-              return <AnimatedText {...item} key={index} />;
-            })}
-          </div>
-        </motion.div>
-      )}
+    <div
+      className={styles.page}
+      style={{
+        marginTop: `${props.marginTop}px`,
+        backgroundColor,
+        paddingTop,
+        paddingBottom,
+      }}
+    >
+      <Container>
+        {image}
+        {props.heading && (
+          <motion.div
+            style={{ marginTop: image ? "32px" : 0 }}
+            className="App"
+            initial="hidden"
+            animate={"visible"}
+            variants={container}
+          >
+            <div className="container">
+              {placeholderText.map((item, index) => {
+                return <AnimatedText {...item} key={index} />;
+              })}
+            </div>
+          </motion.div>
+        )}
 
-      {props.children}
+        {props.children}
+      </Container>
     </div>
   );
 };

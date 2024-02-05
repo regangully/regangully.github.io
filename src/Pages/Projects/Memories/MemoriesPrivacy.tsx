@@ -6,25 +6,29 @@ import { ANIMATE_PROPS } from "../../../Animation";
 
 const MemoriesPrivacy = () => {
   return (
-    <Page image={<img width={"72px"} src={MemoriesIcon} />} marginTop={100} alternateBackground={true} heading="Privacy Policy">
+    <Page
+      image={<img width={"72px"} src={MemoriesIcon} />}
+      marginTop={100}
+      heading="Privacy Policy"
+    >
       <motion.div {...ANIMATE_PROPS(0.75)} className={style.about}>
         <p>Last Updated: 10 September, 2023</p>
         <br />
         <h3>1. Introduction</h3>
         <p>
-          This is the Memories: Daily Journal ("we," "us," or "our") privacy policy. We are committed to
-          protecting your privacy and ensuring the security of your personal
-          information. This Privacy Policy explains how we collect, use, and
-          safeguard any data that we may collect from users of our iOS
-          application.
+          This is the Memories: Daily Journal ("we," "us," or "our") privacy
+          policy. We are committed to protecting your privacy and ensuring the
+          security of your personal information. This Privacy Policy explains
+          how we collect, use, and safeguard any data that we may collect from
+          users of our iOS application.
         </p>
 
         <h3>2. Information We Do Not Collect</h3>
         <p>
-          We want to assure you that Memories: Daily Journal does not collect any personal
-          data or information from its users. We do not request access to your
-          device's camera, microphone, contacts, location, or any other personal
-          information.
+          We want to assure you that Memories: Daily Journal does not collect
+          any personal data or information from its users. We do not request
+          access to your device's camera, microphone, contacts, location, or any
+          other personal information.
         </p>
         <p>
           We do not use cookies, analytics tools, or any other tracking
@@ -61,8 +65,8 @@ const MemoriesPrivacy = () => {
         </p>
 
         <p>
-          By using Memories: Daily Journal, you consent to the terms of this Privacy
-          Policy.
+          By using Memories: Daily Journal, you consent to the terms of this
+          Privacy Policy.
         </p>
 
         <p>Thank you for using Memories: Daily Journal!</p>

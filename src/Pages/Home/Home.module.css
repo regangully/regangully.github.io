@@ -4,9 +4,13 @@
 }
 
 .header {
-  margin-top: 116px;
   display: flex;
   align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 .background {
@@ -51,20 +55,20 @@
 }
 
 .description {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
   width: 75%;
 }
 
 .heading {
   color: #203c25;
-  margin-bottom: -18px;
 }
 
 .profile {
-  height: 200px;
-  border-radius: 100%;
+  height: 500px;
   margin-right: 40px;
-  border: 7px solid #569f63;
-  box-shadow: 0 0 0 7px #fff;
 }
 
 .badge {
@@ -141,8 +145,8 @@
   }
 
   .description {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 30px;
+    line-height: 52px;
     width: 100%;
     text-align: center;
     box-sizing: border-box;

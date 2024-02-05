@@ -3,9 +3,9 @@
 }
 
 .page {
-  padding-bottom: 132px;
+  background-color: #569F63;
   box-sizing: border-box;
-  padding: 0 32px 42px 32px;
+  padding: 72px 32px 72px 32px;
 }
 
 @media only screen and (max-width: 900px) {

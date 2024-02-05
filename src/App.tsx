@@ -11,6 +11,7 @@ import useGlobalStore from "./Store/GlobalStore";
 import shallow from "zustand/shallow";
 import MemoriesPrivacy from "./Pages/Projects/Memories/MemoriesPrivacy";
 import MemoriesContact from "./Pages/Projects/Memories/MemoriesContact";
+import Main from "./Pages/Main";
 
 const NavigationRoutes = () => {
   const { alternateBackground } = useGlobalStore(
@@ -39,18 +40,16 @@ const NavigationRoutes = () => {
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Routes>
-          <Route path="/" element={<NavigationRoutes />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/contact" element={<Contact />} />
-          </Route>
-          <Route path="/memories/privacy" element={<MemoriesPrivacy />} />
-          <Route path="/memories/contact" element={<MemoriesContact />} />
-        </Routes>
-      </Container>
+      <Routes>
+        <Route path="/" element={<NavigationRoutes />}>
+          <Route path="/" element={<Main />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+        <Route path="/memories/privacy" element={<MemoriesPrivacy />} />
+        <Route path="/memories/contact" element={<MemoriesContact />} />
+      </Routes>
     </div>
   );
 }

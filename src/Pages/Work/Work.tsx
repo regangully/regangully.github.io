@@ -19,7 +19,7 @@ const Work = () => {
   const [showExperience, setShowExperience] = useState<boolean>(false);
 
   return (
-    <Page heading="Projects" alternateBackground={true}>
+    <Page backgroundColor="#242232" heading="Projects">
       <motion.div {...ANIMATE_PROPS(0.8)} className={style.items}>
         <ListItem
           link="https://apps.apple.com/us/app/memories-daily-journal/id6465693086?platform=iphone"

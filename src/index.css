@@ -3,7 +3,6 @@ body {
   font-family: "Readex Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #569f63;
   color: #fff;
   transition: all 0.3s;
 }

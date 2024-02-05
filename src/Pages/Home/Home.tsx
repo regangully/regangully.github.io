@@ -1,12 +1,9 @@
 import Page from "../../Components/Page/Page";
 import PinImage from "../../Resources/pin.svg";
-import ProfileImage1 from "../../Resources/regan-1.jpg";
-import ProfileImage2 from "../../Resources/regan-2.jpg";
-import Speaker from "../../Resources/speaker_high.svg";
+import ProfileImage1 from "../../Resources/regan-3.png";
 import Welcome from "../../Resources/welcome.mp3";
 import Kiaora from "../../Resources/kia_ora.mp3";
 import GoodDay from "../../Resources/good_day.mp3";
-import Background from "../../Resources/background.png";
 import styles from "./Home.module.css";
 import { motion } from "framer-motion";
 import AnimatedText from "../../Components/AnimatedText/AnimatedText";
@@ -19,7 +16,7 @@ const Home = () => {
   const [goodDaySound] = useSound(GoodDay);
 
   const sounds = [welcomeSound, kiaoraSound, goodDaySound];
-  const image = [ProfileImage1, ProfileImage2];
+  const image = [ProfileImage1];
 
   const container = {
     visible: {
@@ -46,25 +43,17 @@ const Home = () => {
   };
 
   const getImage = () => {
-    return image[getRandomInt(0, 1)];
+    return image[0];
   };
 
   return (
-    <Page>
+    <Page paddingBottom="0" paddingTop="0">
       <div className={styles.header}>
-        <div className={styles.profileContainer}>
-          <motion.img
-            {...ANIMATE_PROPS(0.2)}
-            className={styles.profile}
-            src={getImage()}
-          />
-          <motion.img
-            {...ANIMATE_PROPS(0.6)}
-            onClick={() => getSound()()}
-            className={styles.speaker}
-            src={Speaker}
-          />
-        </div>
+        <motion.img
+          {...ANIMATE_PROPS(0.2)}
+          className={styles.profile}
+          src={getImage()}
+        />
 
         <motion.div
           className={styles.container}
@@ -72,31 +61,12 @@ const Home = () => {
           animate={"visible"}
           variants={container}
         >
-          <div className="container">
-            {placeholderText.map((item, index) => {
-              return <AnimatedText {...item} key={index} />;
-            })}
+          <h2>Kia ora,</h2>
+          <h1 style={{marginTop: "-16px"}}>I'm Regan</h1>
+          <div className={styles.description}>
+            A software engineer with a passion for travelling, exploring, and
+            creating things that make a difference.
           </div>
-        </motion.div>
-      </div>
-
-      <motion.h5 {...ANIMATE_PROPS(0.6)} className={styles.description}>
-        A software engineer with a passion for travelling, exploring, and
-        creating things that make a difference.
-      </motion.h5>
-
-      <div className={styles.footer}>
-        <motion.div {...ANIMATE_PROPS(0.8)} className={styles.location}>
-          <img alt="Location Pin" className={styles.pin} src={PinImage} />
-          New Zealand
-        </motion.div>
-
-        <motion.div {...ANIMATE_PROPS(1)}>
-          <a className={styles.badgeLink} href="mailto:regangully@me.com">
-            <div className={styles.badgeContainer}>
-              <span className={styles.badgeLabel}>Get in touch</span>
-            </div>
-          </a>
         </motion.div>
       </div>
     </Page>

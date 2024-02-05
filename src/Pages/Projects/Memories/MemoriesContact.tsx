@@ -9,7 +9,6 @@ const MemoriesContact = () => {
     <Page
       image={<img width={"72px"} src={MemoriesIcon} />}
       marginTop={100}
-      alternateBackground={true}
       heading="Contact"
     >
       <motion.div {...ANIMATE_PROPS(0.75)} className={style.about}>

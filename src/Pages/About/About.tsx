@@ -12,7 +12,7 @@ import { ANIMATE_PROPS } from "../../Animation";
 
 const About = () => {
   return (
-    <Page alternateBackground={true} heading="About Me">
+    <Page backgroundColor="#FFF" heading="About Me">
       <motion.div {...ANIMATE_PROPS(0.75)} className={style.about}>
         <p>
           I am a kiwi Software Engineer from little-ole' Aotearoa, New Zealand.
