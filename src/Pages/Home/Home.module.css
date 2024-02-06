@@ -3,6 +3,27 @@
   margin-right: 12px;
 }
 
+.headline1 {
+  color: #5fc771;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.headline2 {
+  color: #0e2f3f;
+  margin-top: -16px;
+  letter-spacing: -2px;
+}
+
+.description {
+  font-family: "Sora", sans-serif;
+  color: #819ca9;
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  width: 90%;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -54,21 +75,18 @@
   font-weight: 300;
 }
 
-.description {
-  margin-top: 24px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 32px;
-  width: 75%;
-}
-
 .heading {
   color: #203c25;
 }
 
 .profile {
-  height: 500px;
-  margin-right: 40px;
+  height: 450px;
+  margin-right: 0px;
+  display: block;
+}
+
+.profile.bottom {
+  display: none;
 }
 
 .badge {
@@ -106,17 +124,29 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .speaker {
     right: 0;
   }
 
-  h1 {
-    font-size: 56px;
+  .description {
+    font-family: "Sora", sans-serif;
+    color: #819ca9;
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    width: 100%;
+    margin-bottom: 42px;
   }
 
-  h2 {
-    font-size: 36px;
+  .headline1 {
+    font-size: 48px;
+  }
+
+  .headline2 {
+    margin-top: -8px;
+    font-size: 56px;
   }
 
   .header {
@@ -126,9 +156,12 @@
     align-items: center;
   }
 
-  .profile {
-    height: 170px;
-    margin-right: 0;
+  .profile.top {
+    display: none;
+  }
+
+  .profile.bottom {
+    display: block;
   }
 
   .header {
@@ -142,14 +175,6 @@
 
   .heading {
     margin-bottom: -12px;
-  }
-
-  .description {
-    font-size: 30px;
-    line-height: 52px;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
   }
 
   .footer {

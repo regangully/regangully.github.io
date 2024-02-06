@@ -1,10 +1,7 @@
 import "./App.css";
-import Home from "./Pages/Home/Home";
-import Work from "./Pages/Work/Work";
+import Work from "./Pages/Work/Projects";
 import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
-
-import Container from "./Components/Container/Container";
 import Navigation from "./Components/Navigation/Navigation";
 import { Outlet, Route, Routes } from "react-router-dom";
 import useGlobalStore from "./Store/GlobalStore";
@@ -26,10 +23,13 @@ const NavigationRoutes = () => {
       <Navigation
         alternateBackground={alternateBackground}
         routes={[
-          { label: "Home", path: "/" },
-          { label: "About", path: "/about" },
-          { label: "Work", path: "/work" },
-          { label: "Contact", path: "/contact" },
+          { label: "Home", path: "#" },
+          { label: "About", path: "#about" },
+          { label: "Projects", path: "#projects" },
+          { label: "Experience", path: "#experience" },
+        ]}
+        actions={[
+          // { label: "Blog", path: "/blog" },
         ]}
       />
       <Outlet />

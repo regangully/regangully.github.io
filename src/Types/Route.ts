@@ -1,5 +1,5 @@
 interface Route {
-  label: string;
+  label: string | JSX.Element;
   path: string;
 }
 

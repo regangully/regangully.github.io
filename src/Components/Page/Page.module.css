@@ -1,15 +1,11 @@
-.heading {
-  margin-bottom: 48px;
-}
-
 .page {
-  background-color: #569F63;
+  background-color: #f8f7f2;
   box-sizing: border-box;
-  padding: 72px 32px 72px 32px;
+  padding: 108px 32px 108px 32px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .page {
-    padding: 0 32px 42px 32px;
+    padding: 108px 32px 108px 32px;
   }
 }

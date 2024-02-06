@@ -4,6 +4,7 @@ import AnimatedText from "../AnimatedText/AnimatedText";
 import Container from "../Container/Container";
 
 const Page = (props: {
+  id?: string;
   heading?: string;
   children?: any;
   marginTop?: number;
@@ -11,8 +12,19 @@ const Page = (props: {
   backgroundColor?: string;
   paddingTop?: string;
   paddingBottom?: string;
+  headingColor?: string;
+  icon?: any;
 }) => {
-  const { image, backgroundColor, paddingTop, paddingBottom } = props;
+  const {
+    icon,
+    image,
+    backgroundColor,
+    paddingTop,
+    paddingBottom,
+    headingColor,
+  } = props;
+
+  const PageIcon = icon;
 
   const container = {
     visible: {
@@ -22,12 +34,13 @@ const Page = (props: {
     },
   };
 
-  const placeholderText = [
+  const text = [
     { type: "heading2", classes: `${styles.heading}`, text: props.heading },
   ];
 
   return (
     <div
+      id={props.id}
       className={styles.page}
       style={{
         marginTop: `${props.marginTop}px`,
@@ -40,14 +53,22 @@ const Page = (props: {
         {image}
         {props.heading && (
           <motion.div
-            style={{ marginTop: image ? "32px" : 0 }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginTop: image ? "32px" : 0,
+            }}
             className="App"
             initial="hidden"
             animate={"visible"}
             variants={container}
           >
-            <div className="container">
-              {placeholderText.map((item, index) => {
+            {PageIcon && <PageIcon color={headingColor} weight={"fill"} size={48} />}
+            <div
+              style={{ marginLeft: "12px", marginTop: "16px", color: headingColor }}
+              className="container"
+            >
+              {text.map((item, index) => {
                 return <AnimatedText {...item} key={index} />;
               })}
             </div>

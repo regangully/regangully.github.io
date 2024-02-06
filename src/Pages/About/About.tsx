@@ -1,21 +1,17 @@
 import style from "./About.module.css";
 import Page from "../../Components/Page/Page";
-import {
-  LinkedinLogo,
-  DribbbleLogo,
-  InstagramLogo,
-  TiktokLogo,
-  GithubLogo,
-} from "phosphor-react";
+import { LinkedinLogo, DribbbleLogo, GithubLogo, Lightning } from "phosphor-react";
 import { motion } from "framer-motion";
 import { ANIMATE_PROPS } from "../../Animation";
+import { Tooltip } from "react-tooltip";
 
 const About = () => {
   return (
-    <Page backgroundColor="#FFF" heading="About Me">
+    <Page id="about" icon={Lightning} backgroundColor="#FFF" heading="About Me">
       <motion.div {...ANIMATE_PROPS(0.75)} className={style.about}>
         <p>
-          I am a kiwi Software Engineer from little-ole' Aotearoa, New Zealand.
+          I am a kiwi Software Engineer and Designer from little-ole' Aotearoa,
+          New Zealand.
         </p>
         <p>
           I have always had a passion for creating things. Nowadays, I use this

@@ -22,8 +22,8 @@
   align-items: flex-end;
 }
 
-.text {
-  margin: 0;
+.dark p {
+  color: #819ca9;
 }
 
 .footer {
@@ -34,6 +34,12 @@
 }
 
 .subLabel {
-  opacity: 0.3;
-  font-weight: 300;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  color: #819ca9;
+  font-weight: 400;
+}
+
+.subLabel.dark {
+  color: #4D6773;
 }

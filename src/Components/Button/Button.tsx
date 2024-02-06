@@ -1,13 +1,16 @@
 import { styled } from "@stitches/react";
 
 const StyledButton = styled("button", {
-  borderRadius: "9999px",
   backgroundColor: "transparent",
   border: "1px solid #569F63",
+  fontFamily: '"Sora", sans-serif',
+  fontWeight: 500,
   color: "#569F63",
   fontSize: "16px",
-  padding: "8px 16px 8px 16px",
+  padding: "12px 16px 12px 16px",
   cursor: "pointer",
+  transform: "skewX(-20deg)",
+  display: "inline-block",
   variants: {
     variant: {
       primary: {},
@@ -22,6 +25,10 @@ const StyledButton = styled("button", {
   },
 });
 
+const ButtonContent = styled("div", {
+  transform: "skewX(20deg)",
+});
+
 const Button = (props: {
   label: string;
   onClick?: () => void;
@@ -29,7 +36,7 @@ const Button = (props: {
 }) => {
   return (
     <StyledButton onClick={props.onClick} variant={props.variant}>
-      {props.label}
+      <ButtonContent>{props.label}</ButtonContent>
     </StyledButton>
   );
 };
