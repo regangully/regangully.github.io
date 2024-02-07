@@ -4,19 +4,21 @@
 }
 
 .headline1 {
-  color: #5fc771;
+  user-select: none;
+  color: var(--theme-accent);
   font-family: "Bebas Neue", sans-serif;
 }
 
 .headline2 {
-  color: #0e2f3f;
+  user-select: none;
+  color: var(--theme-text-1);
   margin-top: -16px;
   letter-spacing: -2px;
 }
 
 .description {
   font-family: "Sora", sans-serif;
-  color: #819ca9;
+  color: var(--theme-text-4);
   margin-top: 24px;
   font-weight: 400;
   font-size: 20px;
@@ -80,6 +82,7 @@
 }
 
 .profile {
+  user-select: none;
   height: 450px;
   margin-right: 0px;
   display: block;

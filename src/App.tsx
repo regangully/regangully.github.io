@@ -9,6 +9,8 @@ import shallow from "zustand/shallow";
 import MemoriesPrivacy from "./Pages/Projects/Memories/MemoriesPrivacy";
 import MemoriesContact from "./Pages/Projects/Memories/MemoriesContact";
 import Main from "./Pages/Main";
+import { useState } from "react";
+import { ThemeProvider, useTheme } from "./Theme";
 
 const NavigationRoutes = () => {
   const { alternateBackground } = useGlobalStore(
@@ -23,23 +25,26 @@ const NavigationRoutes = () => {
       <Navigation
         alternateBackground={alternateBackground}
         routes={[
-          { label: "Home", path: "#" },
-          { label: "About", path: "#about" },
+          { label: "About Me", path: "#about" },
           { label: "Projects", path: "#projects" },
           { label: "Experience", path: "#experience" },
         ]}
-        actions={[
-          // { label: "Blog", path: "/blog" },
-        ]}
+        actions={
+          [
+            { label: "Blog", path: "/blog" },
+          ]
+        }
       />
       <Outlet />
     </>
   );
 };
 
-function App() {
+const AppContent = () => {
+  const { theme } = useTheme();
+
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <Routes>
         <Route path="/" element={<NavigationRoutes />}>
           <Route path="/" element={<Main />} />
@@ -51,6 +56,14 @@ function App() {
         <Route path="/memories/contact" element={<MemoriesContact />} />
       </Routes>
     </div>
+  );
+};
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 

@@ -7,8 +7,8 @@ import { Tooltip } from "react-tooltip";
 
 const About = () => {
   return (
-    <Page id="about" icon={Lightning} backgroundColor="#FFF" heading="About Me">
-      <motion.div {...ANIMATE_PROPS(0.75)} className={style.about}>
+    <Page id="about" icon={Lightning} backgroundColor="var(--theme-page-background-1)" heading="About Me">
+      <div {...ANIMATE_PROPS(0.75)} className={style.about}>
         <p>
           I am a kiwi Software Engineer and Designer from little-ole' Aotearoa,
           New Zealand.
@@ -23,7 +23,7 @@ const About = () => {
           with photography, videography, and sharing my adventures. I'd love for
           you to follow along.
         </p>
-      </motion.div>
+      </div>
       <div className={style.socialContainer}>
         {/* <motion.a
           {...ANIMATE_PROPS(1)}

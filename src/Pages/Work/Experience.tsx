@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { ANIMATE_PROPS } from "../../Animation";
 import Button from "../../Components/Button/Button";
 import ListItem from "../../Components/ListItem/ListItem";
@@ -6,17 +6,28 @@ import Smudge from "../../Resources/smudge-dark.png";
 import Skope from "../../Resources/skope-dark.png";
 import Estar from "../../Resources/estar-dark.png";
 import NomosOne from "../../Resources/nomosone-dark.png";
+import SmudgeLight from "../../Resources/smudge.png";
+import SkopeLight from "../../Resources/skope.png";
+import EstarLight from "../../Resources/estar.png";
+import NomosOneLight from "../../Resources/nomosone.png";
 import style from "./Experience.module.css";
 import { useState } from "react";
 import Page from "../../Components/Page/Page";
 import { Sun } from "phosphor-react";
+import { useTheme } from "../../Theme";
 
 const Experience = () => {
+  const { theme } = useTheme();
   const [showExperience, setShowExperience] = useState<boolean>(false);
 
   return (
-    <Page icon={Sun} backgroundColor="#FFF" id="experience" heading="Experience">
-      <motion.div {...ANIMATE_PROPS(1)}>
+    <Page
+      icon={Sun}
+      backgroundColor="var(--theme-page-background-1)"
+      id="experience"
+      heading="Experience"
+    >
+      <div {...ANIMATE_PROPS(1)}>
         <div className={style.items}>
           <ListItem
             subLabel="2021 - Present"
@@ -45,15 +56,11 @@ const Experience = () => {
               </>
             }
             imageHeight={80}
-            image={NomosOne}
+            image={theme === "light" ? NomosOne : NomosOneLight}
           />
           <AnimatePresence>
             {showExperience && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
+              <div>
                 <ListItem
                   subLabel="2018 - 2021"
                   text={
@@ -83,7 +90,7 @@ const Experience = () => {
                     </>
                   }
                   imageHeight={80}
-                  image={Smudge}
+                  image={theme === "light" ? Smudge : SmudgeLight}
                 />
                 <ListItem
                   subLabel="2016 - 2017"
@@ -118,7 +125,7 @@ const Experience = () => {
                     </>
                   }
                   imageHeight={80}
-                  image={Skope}
+                  image={theme === "light" ? Skope : SkopeLight}
                 />
                 <ListItem
                   subLabel="2015 - 2016"
@@ -149,17 +156,15 @@ const Experience = () => {
                     </>
                   }
                   imageHeight={80}
-                  image={Estar}
+                  image={theme === "light" ? Estar : EstarLight}
                 />
-              </motion.div>
+              </div>
             )}
           </AnimatePresence>
 
-          <div className={style.divider} />
           <div className={style.viewMoreSection}>
             <Button
               onClick={() => setShowExperience(!showExperience)}
-              variant="link"
               label={
                 showExperience
                   ? "Hide Additional Experience"
@@ -168,7 +173,7 @@ const Experience = () => {
             />
           </div>
         </div>
-      </motion.div>
+      </div>
     </Page>
   );
 };

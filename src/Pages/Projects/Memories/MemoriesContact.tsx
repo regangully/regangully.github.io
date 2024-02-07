@@ -11,7 +11,7 @@ const MemoriesContact = () => {
       marginTop={100}
       heading="Contact"
     >
-      <motion.div {...ANIMATE_PROPS(0.75)} className={style.about}>
+      <div {...ANIMATE_PROPS(0.75)} className={style.about}>
         <section>
           <h3>Get in Touch:</h3>
           <ul>
@@ -65,7 +65,7 @@ const MemoriesContact = () => {
             </li>
           </ul>
         </section>
-      </motion.div>
+      </div>
     </Page>
   );
 };

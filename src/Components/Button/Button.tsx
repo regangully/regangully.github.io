@@ -2,15 +2,16 @@ import { styled } from "@stitches/react";
 
 const StyledButton = styled("button", {
   backgroundColor: "transparent",
-  border: "1px solid #569F63",
+  border: "1px solid var(--theme-accent)",
   fontFamily: '"Sora", sans-serif',
   fontWeight: 500,
-  color: "#569F63",
+  color: "var(--theme-accent)",
   fontSize: "16px",
   padding: "12px 16px 12px 16px",
   cursor: "pointer",
   transform: "skewX(-20deg)",
   display: "inline-block",
+  borderRadius: "4px",
   variants: {
     variant: {
       primary: {},
@@ -20,7 +21,7 @@ const StyledButton = styled("button", {
     },
   },
   "&:hover": {
-    backgroundColor: "#569F63",
+    backgroundColor: "var(--theme-accent)",
     color: "#071726",
   },
 });

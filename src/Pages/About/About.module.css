@@ -8,7 +8,7 @@
 }
 
 .socialIcon {
-  color: #0E2F3F;
+  color: var(--theme-accent);
   margin-right: 24px;
 }
 

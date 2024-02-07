@@ -3,18 +3,22 @@ import { Link, useLocation } from "react-router-dom";
 import { ANIMATE_PROPS } from "../../Animation";
 import Route from "../../Types/Route";
 import style from "./Navigation.module.css";
-import Monogram from "../../Resources/monogram.png";
+import MonogramLight from "../../Resources/monogram-light.png";
+import MonogramDark from "../../Resources/monogram.png";
 import Container from "../Container/Container";
 import { HashLink } from "react-router-hash-link";
 import { List, Moon, Sun, X } from "phosphor-react";
 import { useEffect, useState } from "react";
 import useWindowDimensions from "../../Utilities/useWindowDimensions";
+import { useTheme } from "../../Theme";
+import TopBlob from "../../Resources/top_blob.png";
 
 const Navigation = (props: {
   routes: Route[];
   actions?: Route[];
   alternateBackground: boolean;
 }) => {
+  const { toggleTheme, theme } = useTheme();
   const { width } = useWindowDimensions();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -30,9 +34,15 @@ const Navigation = (props: {
   return (
     <div className={style.wrapper}>
       <Container>
+        <img className={style.topBlob} src={TopBlob} />
+
         <div className={style.content}>
           <Link to={"/"}>
-            <img className={style.monogram} src={Monogram} />
+            {theme === "light" ? (
+              <img className={style.monogram} src={MonogramDark} />
+            ) : (
+              <img className={style.monogram} src={MonogramLight} />
+            )}
           </Link>
           <div className={`${style.links} ${isOpen ? style.open : ""}`}>
             <div className={style.close}>
@@ -56,7 +66,7 @@ const Navigation = (props: {
                     onClick={() => setIsOpen(false)}
                     to={route.path}
                   >
-                    <motion.div
+                    <div
                       {...ANIMATE_PROPS(0.2 * i)}
                       className={style.navItem}
                     >
@@ -66,7 +76,7 @@ const Navigation = (props: {
                           alternateBackground ? style.alternate : ""
                         } ${isActive ? style.active : ""}`}
                       />
-                    </motion.div>
+                    </div>
                   </HashLink>
                 );
               })}
@@ -84,7 +94,7 @@ const Navigation = (props: {
                     }`}
                     to={route.path}
                   >
-                    <motion.div
+                    <div
                       {...ANIMATE_PROPS(0.2 * i)}
                       className={style.navItem}
                     >
@@ -94,12 +104,16 @@ const Navigation = (props: {
                           alternateBackground ? style.alternate : ""
                         } ${isActive ? style.active : ""}`}
                       />
-                    </motion.div>
+                    </div>
                   </HashLink>
                 );
               })}
-              <div className={style.toggle}>
-                <Moon size={28} />
+              <div onClick={toggleTheme} className={style.toggle}>
+                {theme === "light" ? (
+                  <Moon color={"var(--theme-text-2)"} size={28} />
+                ) : (
+                  <Sun color={"var(--theme-text-2)"} size={28} />
+                )}
               </div>
             </div>
           </div>

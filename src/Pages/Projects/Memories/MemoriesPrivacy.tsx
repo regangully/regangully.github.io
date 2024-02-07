@@ -11,7 +11,7 @@ const MemoriesPrivacy = () => {
       marginTop={100}
       heading="Privacy Policy"
     >
-      <motion.div {...ANIMATE_PROPS(0.75)} className={style.about}>
+      <div {...ANIMATE_PROPS(0.75)} className={style.about}>
         <p>Last Updated: 10 September, 2023</p>
         <br />
         <h3>1. Introduction</h3>
@@ -70,7 +70,7 @@ const MemoriesPrivacy = () => {
         </p>
 
         <p>Thank you for using Memories: Daily Journal!</p>
-      </motion.div>
+      </div>
     </Page>
   );
 };

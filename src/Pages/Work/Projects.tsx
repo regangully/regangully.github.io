@@ -17,11 +17,11 @@ const Projects = () => {
     <Page
       icon={Globe}
       id="projects"
-      headingColor="#FFF"
-      backgroundColor="#242232"
+      headingColor="var(--theme-text-5)"
+      backgroundColor="var(--theme-background-dark)"
       heading="Projects"
     >
-      <motion.div {...ANIMATE_PROPS(0.8)} className={style.items}>
+      <div {...ANIMATE_PROPS(0.8)} className={style.items}>
         <ListItem
           isDark={true}
           link="https://apps.apple.com/us/app/daybreak-time-tracking/id1558197906"
@@ -57,11 +57,7 @@ const Projects = () => {
         />
         <AnimatePresence>
           {showProjects && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
+            <div>
               <ListItem
                 isDark={true}
                 link={`https://play.google.com/store/apps/details?id=com.regangully.simpla&utm_source=appgrooves&utm_medium=agp_fb7842da7db7675b65a3b2dc4d921362_com.regangully.simpla_us_others_16397992788401`}
@@ -78,21 +74,19 @@ const Projects = () => {
                 imageHeight={80}
                 image={Simpla}
               />
-            </motion.div>
+            </div>
           )}
         </AnimatePresence>
 
-        <div className={style.divider} />
         <div className={style.viewMoreSection}>
           <Button
             onClick={() => setShowProjects(!showProjects)}
-            variant="link"
             label={
               showProjects ? "Hide Additional Projects" : "View More Projects"
             }
           />
         </div>
-      </motion.div>
+      </div>
     </Page>
   );
 };

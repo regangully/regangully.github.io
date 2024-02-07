@@ -52,27 +52,30 @@ const Page = (props: {
       <Container>
         {image}
         {props.heading && (
-          <motion.div
+          <div
             style={{
               display: "flex",
               alignItems: "center",
               marginTop: image ? "32px" : 0,
             }}
             className="App"
-            initial="hidden"
-            animate={"visible"}
-            variants={container}
           >
-            {PageIcon && <PageIcon color={headingColor} weight={"fill"} size={48} />}
+            {PageIcon && (
+              <PageIcon color={headingColor} weight={"fill"} size={48} />
+            )}
             <div
-              style={{ marginLeft: "12px", marginTop: "16px", color: headingColor }}
+              style={{
+                marginLeft: "12px",
+                marginTop: "16px",
+                color: headingColor,
+              }}
               className="container"
             >
               {text.map((item, index) => {
                 return <AnimatedText {...item} key={index} />;
               })}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {props.children}

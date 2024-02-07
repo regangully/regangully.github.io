@@ -24,11 +24,15 @@ const ListItem = (props: {
           {props.text}
         </div>
         <div className={style.footer}>
-          <span className={`${style.subLabel} ${props.isDark ? style.dark : ""}`}>{props.subLabel}</span>
+          <span
+            className={`${style.subLabel} ${props.isDark ? style.dark : ""}`}
+          >
+            {props.subLabel}
+          </span>
           {props.buttonLabel && (
             <div className={style.link}>
               <a target="_blank" href={props.link}>
-                <Button label={props.buttonLabel} />
+                <Button variant="link" label={props.buttonLabel} />
               </a>
             </div>
           )}

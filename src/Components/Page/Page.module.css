@@ -1,5 +1,6 @@
 .page {
-  background-color: #f8f7f2;
+  color: var(--theme-text-1);
+  background-color: var(--theme-page-background);
   box-sizing: border-box;
   padding: 108px 32px 108px 32px;
 }

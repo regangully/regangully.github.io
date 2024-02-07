@@ -1,1 +1,66 @@
+.light {
+  --theme-page-background: #f8f7f2;
+  --theme-page-background-1: #fff;
+  --theme-background-dark: #161D2D;
+  --theme-accent: #e33358;
+  --theme-text-1: #151d2f;
+  --theme-text-2: #0e2f3f;
+  --theme-text-3: #4d6773;
+  --theme-text-4: #819ca9;
+  --theme-text-5: #ccdae1;
+}
 
+.dark {
+  --theme-page-background: #0F141F;
+  --theme-page-background-1: #121825;
+  --theme-background-dark: #161D2D;
+  --theme-accent: #e33358;
+  --theme-text-1: #FFF;
+  --theme-text-2: #ccdae1;
+  --theme-text-3: #B0C4CF;
+  --theme-text-4: #819ca9;
+  --theme-text-5: #ccdae1;
+}
+
+body {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--theme-text-1);
+  transition: all 0.3s;
+  background-color: var(--theme-page-background);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--theme-text-2);
+}
+
+p:first-child {
+  margin: 0;
+}
+
+h1 {
+  font-size: 90px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 46px;
+}
