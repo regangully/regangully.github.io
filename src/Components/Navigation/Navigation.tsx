@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { ANIMATE_PROPS } from "../../Animation";
 import Route from "../../Types/Route";

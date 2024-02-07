@@ -1,6 +1,5 @@
 import style from "./MemoriesPrivacy.module.css";
 import Page from "../../../Components/Page/Page";
-import { motion } from "framer-motion";
 import MemoriesIcon from "../../../Resources/memories_icon.png";
 import { ANIMATE_PROPS } from "../../../Animation";
 

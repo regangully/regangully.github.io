@@ -1,5 +1,4 @@
 import styles from "./Page.module.css";
-import { motion } from "framer-motion";
 import AnimatedText from "../AnimatedText/AnimatedText";
 import Container from "../Container/Container";
 
@@ -25,14 +24,6 @@ const Page = (props: {
   } = props;
 
   const PageIcon = icon;
-
-  const container = {
-    visible: {
-      transition: {
-        staggerChildren: 0.025,
-      },
-    },
-  };
 
   const text = [
     { type: "heading2", classes: `${styles.heading}`, text: props.heading },

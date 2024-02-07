@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ANIMATE_PROPS } from "../../Animation";
 import Page from "../../Components/Page/Page";
 import style from "./Contact.module.css";
