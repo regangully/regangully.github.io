@@ -43,3 +43,21 @@
 .subLabel.dark {
   color: var(--theme-text-3);
 }
+
+@media only screen and (max-width: 860px) {
+  .footer {
+    flex-direction: column;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  .subLabel {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 0px;
+  }
+
+  .link {
+    margin-top: 8px;
+  }
+}

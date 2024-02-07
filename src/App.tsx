@@ -11,6 +11,7 @@ import MemoriesContact from "./Pages/Projects/Memories/MemoriesContact";
 import Main from "./Pages/Main";
 import { useState } from "react";
 import { ThemeProvider, useTheme } from "./Theme";
+import Blog from "./Pages/Blog/Blog";
 
 const NavigationRoutes = () => {
   const { alternateBackground } = useGlobalStore(
@@ -31,7 +32,7 @@ const NavigationRoutes = () => {
         ]}
         actions={
           [
-            { label: "Blog", path: "/blog" },
+            // { label: "Blog", path: "/blog" }
           ]
         }
       />
@@ -47,6 +48,7 @@ const AppContent = () => {
     <div className={`App ${theme}`}>
       <Routes>
         <Route path="/" element={<NavigationRoutes />}>
+          <Route path="/blog" element={<Blog />} />
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />

@@ -5,8 +5,20 @@
   padding: 108px 32px 108px 32px;
 }
 
+.icon {
+  height: 52px;
+  width: 52px;
+}
+
 @media only screen and (max-width: 1000px) {
   .page {
     padding: 108px 32px 108px 32px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .icon {
+    height: 48px;
+    width: 48px;
   }
 }

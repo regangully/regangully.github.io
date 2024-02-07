@@ -1,7 +1,7 @@
 .light {
   --theme-page-background: #f8f7f2;
   --theme-page-background-1: #fff;
-  --theme-background-dark: #161D2D;
+  --theme-background-dark: #161d2d;
   --theme-accent: #e33358;
   --theme-text-1: #151d2f;
   --theme-text-2: #0e2f3f;
@@ -11,13 +11,13 @@
 }
 
 .dark {
-  --theme-page-background: #0F141F;
+  --theme-page-background: #0f141f;
   --theme-page-background-1: #121825;
-  --theme-background-dark: #161D2D;
+  --theme-background-dark: #161d2d;
   --theme-accent: #e33358;
-  --theme-text-1: #FFF;
+  --theme-text-1: #fff;
   --theme-text-2: #ccdae1;
-  --theme-text-3: #B0C4CF;
+  --theme-text-3: #b0c4cf;
   --theme-text-4: #819ca9;
   --theme-text-5: #ccdae1;
 }
@@ -63,4 +63,10 @@ h5 {
   font-size: 24px;
   font-weight: 300;
   line-height: 46px;
+}
+
+@media only screen and (max-width: 860px) {
+  h2 {
+    font-size: 36px;
+  }
 }

@@ -52,7 +52,7 @@ const Page = (props: {
             className="App"
           >
             {PageIcon && (
-              <PageIcon color={headingColor} weight={"fill"} size={48} />
+              <PageIcon className={styles.icon} color={headingColor} weight={"fill"}  />
             )}
             <div
               style={{
